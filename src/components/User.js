@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 class User extends Component {
   state = {
-    showUserInfo: true
+    showUserInfo: false
   };
   deleteItem = (id, dispatch) => {
     axios

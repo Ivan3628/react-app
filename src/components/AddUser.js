@@ -70,60 +70,68 @@ class AddUser extends Component {
               <div className="card-body">
                 <form onSubmit={this.submitUser.bind(this, dispatch)}>
                   <div className="form-group">
+                    <label htmlFor={name}>Name</label>
                     <input
                       name="name"
                       type="text"
                       placeholder="Enter Name"
                       className={classnames("form-control form-control-lg", {
-                        "is-invalid": error
+                        "is-invalid": errors.name
                       })}
                       value={name}
                       onChange={this.addToState}
-                      error={errors.name}
                     />
-                    {error && <div className="invalid-feedback">{error}</div>}
+                    {errors.name && (
+                      <div className="invalid-feedback">{errors.name}</div>
+                    )}
                   </div>
                   <div className="form-group">
+                    <label htmlFor={email}>Email</label>
                     <input
                       name="email"
                       type="email"
                       placeholder="Enter Email"
                       className={classnames("form-control form-control-lg", {
-                        "is-invalid": error
+                        "is-invalid": errors.email
                       })}
                       value={email}
                       onChange={this.addToState}
-                      error={errors.email}
                     />
-                    {error && <div className="invalid-feedback">{error}</div>}
+                    {errors.email && (
+                      <div className="invalid-feedback">{errors.email}</div>
+                    )}
                   </div>
                   <div className="form-group">
+                    <label htmlFor={phone}>Phone</label>
                     <input
                       name="phone"
                       type="text"
                       placeholder="Enter Phone"
                       className={classnames("form-control form-control-lg", {
-                        "is-invalid": error
+                        "is-invalid": errors.phone
                       })}
                       value={phone}
                       onChange={this.addToState}
-                      error={errors.phone}
                     />
-                    {error && <div className="invalid-feedback">{error}</div>}
+                    {errors.phone && (
+                      <div className="invalid-feedback">{errors.phone}</div>
+                    )}
                   </div>
                   <div className="form-group">
+                    <label htmlFor={website}>Website</label>
                     <input
                       name="website"
                       type="text"
                       placeholder="Enter Website"
                       className={classnames("form-control form-control-lg", {
-                        "is-invalid": error
+                        "is-invalid": errors.website
                       })}
                       value={website}
                       onChange={this.addToState}
-                      error={errors.website}
                     />
-                    {error && <div className="invalid-feedback">{error}</div>}
+                    {errors.website && (
+                      <div className="invalid-feedback">{errors.website}</div>
+                    )}
                   </div>
                   <input
                     type="submit"

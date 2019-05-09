@@ -6,7 +6,7 @@ const Header = () => {
     <nav className="navbar navbar-expand-sm bg-primary mb-3">
       <div className="container">
         <a href="/" className="navbar-brand text-white">
-          Get Data
+          React App
         </a>
         <div>
           <ul className="navbar-nav  mr-auto">
